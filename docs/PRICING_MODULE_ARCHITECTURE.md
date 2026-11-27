@@ -1,5 +1,65 @@
 # Pricing and Infrastructure Module Architecture
 
+## M5 Implementation Reconciliation - 2026-11-27
+
+### Current assigned-module implementation status
+
+| Assigned module | Status |
+|---|---|
+| M1 - Cloud Service Pricing Explorer | Implemented and published |
+| M3 - Cloud Infrastructure Configuration Builder | Implemented and published |
+| M4 - Cloud Infrastructure Cost Estimator | Implemented and published |
+| M5 - Cloud Pricing Model Comparison | Implemented and verified |
+
+See [M5 Pricing Model Comparison](M5_PRICING_MODEL_COMPARISON.md)
+for the implemented comparison contracts, financial models,
+pricing provenance, dashboard behavior and limitations.
+
+### Implemented M5 architecture
+
+- Reusable comparison scope and signed savings contracts.
+- Historical EC2 On-Demand financial baseline.
+- Hypothetical Reserved Instance commitment calculations.
+- Hypothetical no-upfront Savings Plans calculations.
+- Live Floci Spot observation integration.
+- Equivalent-workload S3 storage-class comparisons.
+- Independent single-resource infrastructure projections.
+- Explicit incomplete-pricing and missing-rate protection.
+- Interactive Streamlit comparison dashboard and CSV export.
+
+### Verification
+
+- M5.1 comparison contracts: 12 passing tests.
+- M5.2 EC2 purchasing models: 16 passing tests.
+- M5.3 storage comparisons: 12 passing tests.
+- M5.4 comparison engine: 12 passing tests.
+- M5.5 dashboard: 11 passing tests.
+- Total M5 automated tests: 63.
+- Complete regression baseline: 404 passing tests.
+- Historical estimate and pricing snapshot integrity verified.
+- Actual historical EC2 and S3 dashboard integration verified.
+- Live Floci Spot retrieval and provenance verified.
+- Manual browser acceptance confirmed by the developer.
+
+### Scope reconciliation
+
+This section supersedes earlier statements describing M5
+as pending implementation.
+
+Previous architecture and implementation sections remain
+preserved as historical design guidance.
+
+The original module ownership and team allocation are unchanged.
+
+All four assigned Member 2 modules are implemented.
+Shared-branch integration remains a separate activity.
+
+No other member's module is claimed as completed by this
+reconciliation.
+
+---
+
+
 ## M4 Implementation Reconciliation - 2026-11-27
 
 ### Current implementation status
