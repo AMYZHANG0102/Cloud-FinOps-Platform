@@ -53,13 +53,46 @@ Implemented:
 - On-Demand component resolution.
 - Spot observation retrieval and persistence.
 - Three integrated Pricing Explorer views.
+- M3 infrastructure configuration, validation and persistence.
+- Interactive Infrastructure Builder with six resource types.
 
 Pending:
 
-- M3 infrastructure scenario configuration and persistence.
 - M4 infrastructure cost estimation.
 - M5 pricing model comparison.
 - Shared application integration.
+
+
+### M3 Implementation Status - 2026-11-27
+
+Module 3 is implemented and verified.
+
+See [M3 Infrastructure Builder](M3_INFRASTRUCTURE_BUILDER.md)
+for the implemented resource contracts, validation rules,
+persistence interfaces and demonstration scenario.
+
+Implemented capabilities:
+
+- Immutable infrastructure and scenario contracts.
+- Six service-specific resource specifications.
+- Exact Decimal usage values.
+- Explicit unknown usage handling.
+- Persistent scenario creation and management.
+- Revision-based update and deletion protection.
+- Dynamic Streamlit resource configuration forms.
+- Persistent scenario reopening.
+
+Verification:
+
+- 45 M3 automated tests passed.
+- Complete regression baseline: 289 passing tests.
+- All six resource forms verified.
+- Manual demonstration scenario overview verified.
+
+M4 and M5 remain pending implementation.
+
+This update does not change module ownership or establish
+approval of proposed cross-module interfaces.
 
 ---
 
