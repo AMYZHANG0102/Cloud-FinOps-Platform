@@ -1,5 +1,59 @@
 # Pricing and Infrastructure Module Architecture
 
+## M4 Implementation Reconciliation - 2026-11-27
+
+### Current implementation status
+
+| Assigned module | Status |
+|---|---|
+| M1 - Cloud Service Pricing Explorer | Implemented and published |
+| M3 - Cloud Infrastructure Configuration Builder | Implemented and published |
+| M4 - Cloud Infrastructure Cost Estimator | Implemented and verified |
+| M5 - Cloud Pricing Model Comparison | Pending implementation |
+
+See [M4 Cost Estimator](M4_COST_ESTIMATOR.md) for the implemented
+financial contracts, pricing integration, historical persistence,
+dashboard behavior and known limitations.
+
+### Implemented M4 capabilities
+
+- Decimal financial calculations and graduated pricing tiers.
+- Six resource billing-component mappings.
+- Live pricing resolution through the M1 foundation.
+- Explicit Floci-only and reference-enabled pricing policies.
+- Compatible billing-pool calculation and proportional allocation.
+- Resource, service and infrastructure expenditure summaries.
+- Complete and partial estimate handling.
+- Immutable historical estimates and pricing snapshots.
+- Interactive Cost Estimator dashboard and CSV export.
+
+### Verification
+
+- 52 M4 automated tests passed.
+- Complete regression baseline: 341 passing tests.
+- Live Floci-only monthly subtotal: USD 34.676.
+- Live reference-enabled monthly cost: USD 63.12392.
+- Live reference-enabled annual cost: USD 757.48704.
+- Historical persistence and reopening verified.
+- Three actual saved estimates and snapshots verified.
+- Manual browser acceptance reported successful.
+
+### Scope reconciliation
+
+This section supersedes earlier statements in this document
+that describe M4 as planned or pending.
+
+Previous design sections remain historical architecture guidance
+and are preserved without rewriting their original content.
+
+Original module ownership and team allocation are unchanged.
+
+M5 remains pending implementation. No other member's module is
+claimed as completed by this reconciliation.
+
+---
+
+
 ## Architecture Reconciliation - 2026-11-27
 
 Module 1 is implemented and verified.
