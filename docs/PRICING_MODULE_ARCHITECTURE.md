@@ -1,5 +1,69 @@
 # Pricing and Infrastructure Module Architecture
 
+## Architecture Reconciliation - 2026-11-27
+
+Module 1 is implemented and verified.
+
+See [M1 Pricing Explorer](M1_PRICING_EXPLORER.md)
+for implemented interfaces, verification evidence,
+pricing coverage and limitations.
+
+The remainder of this architecture document describes
+both implemented foundations and planned capabilities.
+
+Planned features must not be interpreted as completed
+implementation.
+
+### Authoritative Module Titles
+
+The following titles follow the instructor's Term Project
+document and supersede any earlier shorthand or inconsistent
+module titles in Sections 5 and 9.
+
+| ID | Official module title | Assigned member |
+|---|---|---|
+| M1 | Cloud Service Pricing Explorer | Member 2 |
+| M2 | Cloud Cost Explorer | Member 1 |
+| M3 | Cloud Infrastructure Configuration Builder | Member 2 |
+| M4 | Cloud Infrastructure Cost Estimator | Member 2 |
+| M5 | Cloud Pricing Model Comparison | Member 2 |
+| M6 | Cloud Workload Simulator | Member 3 |
+| M7 | Intelligent Cost Optimization Engine | Member 3 |
+| M8 | Cost Reporting and Visualization | Member 1 |
+| M9 | Cloud Budget Management | Member 1 |
+| M10 | Resource Utilization and Rightsizing Analysis | Member 3 |
+| M11 | Cost Allocation and Resource Tagging | Member 1 |
+| M12 | Infrastructure Scaling and Auto Scaling Cost Analysis | Member 3 |
+| M13 | Storage Lifecycle and Backup Cost Optimization | Member 1 |
+
+Home remains within Member 1's agreed scope.
+
+This reconciliation corrects terminology only. It does not
+reassign responsibilities or establish approval of proposed
+cross-module interfaces.
+
+### M1 Implementation Status
+
+Implemented:
+
+- Local Floci Pricing and EC2 clients.
+- Dynamic pricing discovery and product retrieval.
+- Decimal normalization and persistent catalogue storage.
+- Supplementary reference pricing.
+- On-Demand component resolution.
+- Spot observation retrieval and persistence.
+- Three integrated Pricing Explorer views.
+
+Pending:
+
+- M3 infrastructure scenario configuration and persistence.
+- M4 infrastructure cost estimation.
+- M5 pricing model comparison.
+- Shared application integration.
+
+---
+
+
 ## 1. Document Status
 
 | Property | Value |
