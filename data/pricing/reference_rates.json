@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "catalogue_version": "2026-11-27.1",
+  "description": "Selected AWS public reference rates for educational estimates. These rates are not retrieved from Floci.",
+  "verified_on": "2026-11-27",
+  "rates": [
+    {
+      "reference_id": "REF-EBS-GP3-STORAGE-USE1",
+      "service_code": "AmazonEC2",
+      "resource_type": "ebs_volume",
+      "product_family": "Storage",
+      "region": "us-east-1",
+      "attributes": {
+        "volumeType": "gp3"
+      },
+      "cost_component": "storage",
+      "pricing_model": "ON_DEMAND",
+      "currency": "USD",
+      "unit": "GiB-Mo",
+      "unit_price": "0.08",
+      "begin_range": "0",
+      "end_range": null,
+      "source_reference": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-storage-compare-volume-types.html",
+      "effective_date": null,
+      "limitations": [
+        "Provisioned gp3 capacity only.",
+        "Prorate for the applicable provisioned storage duration."
+      ]
+    },
+    {
+      "reference_id": "REF-EBS-GP3-IOPS-USE1",
+      "service_code": "AmazonEC2",
+      "resource_type": "ebs_volume",
+      "product_family": "Storage",
+      "region": "us-east-1",
+      "attributes": {
+        "volumeType": "gp3"
+      },
+      "cost_component": "additional_iops",
+      "pricing_model": "ON_DEMAND",
+      "currency": "USD",
+      "unit": "IOPS-Mo",
+      "unit_price": "0.005",
+      "begin_range": "0",
+      "end_range": null,
+      "source_reference": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-storage-compare-volume-types.html",
+      "effective_date": null,
+      "limitations": [
+        "Apply only to provisioned IOPS above the included 3000 IOPS per volume.",
+        "The usage quantity must represent additional IOPS, not total IOPS."
+      ]
+    },
+    {
+      "reference_id": "REF-EBS-GP3-THROUGHPUT-USE1",
+      "service_code": "AmazonEC2",
+      "resource_type": "ebs_volume",
+      "product_family": "Storage",
+      "region": "us-east-1",
+      "attributes": {
+        "volumeType": "gp3"
+      },
+      "cost_component": "additional_throughput",
+      "pricing_model": "ON_DEMAND",
+      "currency": "USD",
+      "unit": "MiBps-Mo",
+      "unit_price": "0.04",
+      "begin_range": "0",
+      "end_range": null,
+      "source_reference": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-storage-compare-volume-types.html",
+      "effective_date": null,
+      "limitations": [
+        "Apply only to provisioned throughput above 125 MiB/s per volume.",
+        "The usage quantity must represent additional throughput."
+      ]
+    },
+    {
+      "reference_id": "REF-LAMBDA-X86-DURATION-USE1",
+      "service_code": "AWSLambda",
+      "resource_type": "function",
+      "product_family": "Serverless",
+      "region": "us-east-1",
+      "attributes": {
+        "architecture": "x86_64",
+        "executionMode": "on_demand"
+      },
+      "cost_component": "duration",
+      "pricing_model": "ON_DEMAND",
+      "currency": "USD",
+      "unit": "GB-Second",
+      "unit_price": "0.0000166667",
+      "begin_range": "0",
+      "end_range": "14880000",
+      "source_reference": "https://aws.amazon.com/lambda/pricing/",
+      "effective_date": null,
+      "limitations": [
+        "Restricted to the usage range demonstrated by the N. Virginia pricing examples.",
+        "The upper boundary is a conservative application coverage limit, not the actual AWS tier boundary.",
+        "Higher usage and volume discounts are not covered by this reference.",
+        "Free-tier credits and provisioned concurrency are excluded."
+      ]
+    },
+    {
+      "reference_id": "REF-LAMBDA-EPHEMERAL-USE1",
+      "service_code": "AWSLambda",
+      "resource_type": "function",
+      "product_family": "Serverless",
+      "region": "us-east-1",
+      "attributes": {
+        "executionMode": "on_demand"
+      },
+      "cost_component": "ephemeral_storage",
+      "pricing_model": "ON_DEMAND",
+      "currency": "USD",
+      "unit": "GB-Second",
+      "unit_price": "0.0000000309",
+      "begin_range": "0",
+      "end_range": null,
+      "source_reference": "https://aws.amazon.com/lambda/pricing/",
+      "effective_date": null,
+      "limitations": [
+        "Only configured ephemeral storage exceeding 512 MB is chargeable.",
+        "Multiply additional storage in GB by billable execution seconds."
+      ]
+    },
+    {
+      "reference_id": "REF-DDB-STANDARD-WRITES-USE1",
+      "service_code": "AmazonDynamoDB",
+      "resource_type": "table",
+      "product_family": "Database",
+      "region": "us-east-1",
+      "attributes": {
+        "tableClass": "Standard",
+        "capacityMode": "on_demand"
+      },
+      "cost_component": "write_requests",
+      "pricing_model": "ON_DEMAND",
+      "currency": "USD",
+      "unit": "WRU",
+      "unit_price": "0.000000625",
+      "begin_range": "0",
+      "end_range": null,
+      "source_reference": "https://aws.amazon.com/dynamodb/pricing/",
+      "effective_date": null,
+      "limitations": [
+        "Converted from USD 0.625 per million write request units.",
+        "Use billable WRUs rather than raw application request counts.",
+        "Single-region standard table pricing."
+      ]
+    },
+    {
+      "reference_id": "REF-DDB-STANDARD-READS-USE1",
+      "service_code": "AmazonDynamoDB",
+      "resource_type": "table",
+      "product_family": "Database",
+      "region": "us-east-1",
+      "attributes": {
+        "tableClass": "Standard",
+        "capacityMode": "on_demand"
+      },
+      "cost_component": "read_requests",
+      "pricing_model": "ON_DEMAND",
+      "currency": "USD",
+      "unit": "RRU",
+      "unit_price": "0.000000125",
+      "begin_range": "0",
+      "end_range": null,
+      "source_reference": "https://aws.amazon.com/dynamodb/pricing/",
+      "effective_date": null,
+      "limitations": [
+        "Converted from USD 0.125 per million read request units.",
+        "Use billable RRUs accounting for read consistency and item size.",
+        "Single-region standard table pricing."
+      ]
+    },
+    {
+      "reference_id": "REF-DDB-STANDARD-STORAGE-USE1",
+      "service_code": "AmazonDynamoDB",
+      "resource_type": "table",
+      "product_family": "Database",
+      "region": "us-east-1",
+      "attributes": {
+        "tableClass": "Standard",
+        "capacityMode": "on_demand"
+      },
+      "cost_component": "storage",
+      "pricing_model": "ON_DEMAND",
+      "currency": "USD",
+      "unit": "GB-Mo",
+      "unit_price": "0.25",
+      "begin_range": "0",
+      "end_range": null,
+      "source_reference": "https://aws.amazon.com/dynamodb/pricing/",
+      "effective_date": null,
+      "limitations": [
+        "Gross storage expenditure before account-level free-tier allowances.",
+        "Backups, replication and data transfer are separate billing components."
+      ]
+    }
+  ]
+}
